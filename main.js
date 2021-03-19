@@ -15,7 +15,7 @@
     // }
 
 })();
-let statusServ = document.getElementsByClassName("statusService1");
+let statusServ = document.getElementById("statusService1");
 
 let localState = localStorage['Status'];
 console.log(localState);
