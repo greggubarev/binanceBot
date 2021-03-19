@@ -5,11 +5,11 @@
 
         return console.log("state is " + state.msg + " status is " + state.status);
 
-    let status = document.getElementById("statusService");
+    let statusServ = document.getElementById("statusService");
     if (state.status == 0) {
-        status.textContent += "online";
+        statusServ.textContent += "online";
     } else {
-        status.textContent += "system maintenance";
+        statusServ.textContent += "system maintenance";
     }
 
 })();
