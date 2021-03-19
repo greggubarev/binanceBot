@@ -5,12 +5,11 @@
     let statusServ = document.getElementsByClassName("statusService1");
     localStorage['Status'] = state.status;
     // return statusServ.textContent += state.status;
-    let localStatus = localStorage['Status'];
+    let localStatus = localStorage['Status'].value;
     if (localStatus == "0") {
         statusServ.textContent = "online";
     } else {
         statusServ.textContent = "maintenance";
-
     }
         return console.log("state is " + state.msg + " status is " + state.status);
     //
