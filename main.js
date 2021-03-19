@@ -2,16 +2,21 @@
     let url = 'https://api.binance.com/wapi/v3/systemStatus.html';
     let response = await fetch(url);
     let state = await response.json(); // читаем ответ в формате JSON
-    return console.log("state is " + state.msg);
+
+        return console.log("state is " + state.msg);
+
+    let status = document.getElementById("statusService");
+    if (state.msg == "normal") {
+        status.textContent += "online";
+    } else {
+        status.textContent += "system maintenance";
+    }
+
 })();
 
 // window.addEventListener('load', function() {
-//     let request = new XMLHttpRequest();
-//     request.open('GET', `https://api.binance.com/wapi/v3/systemStatus.html`);
-//     console.log(request);
 //
 //     let status = document.getElementById("status");
-//
 //
 //     function updateOnlineStatus(event) {
 //         var condition = navigator.onLine ? "online" : "offline";
