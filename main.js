@@ -17,8 +17,9 @@
 })();
 let statusServ = document.getElementsByClassName("statusService1");
 
-let localStatus = localStorage['Status'].value;
-if (localStatus == "0") {
+let localState = localStorage['Status'].value;
+console.log(localState);
+if (localState == "0") {
     statusServ.textContent = "online";
 } else {
     statusServ.textContent = "maintenance";
