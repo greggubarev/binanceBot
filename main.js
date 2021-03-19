@@ -3,8 +3,10 @@
     let response = await fetch(url);
     let state = await response.json(); // читаем ответ в формате JSON
     let statusServ = document.getElementsByClassName("statusService1");
+    localStorage['Status'] = state.status;
     // return statusServ.textContent += state.status;
-    if (state.status == 0) {
+    let localStatus = localStorage['Status'];
+    if (localStatus == "0") {
         statusServ.textContent = "online";
     } else {
         statusServ.textContent = "maintenance";
