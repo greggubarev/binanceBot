@@ -3,8 +3,8 @@
     let response = await fetch(url);
     let state = await response.json(); // читаем ответ в формате JSON
     let statusServ = document.getElementsByClassName("statusService");
-    statusServ.textContent += state.msg;
-        return console.log("state is " + state.msg + " status is " + state.status);
+    return statusServ.textContent += state.msg;
+        // return console.log("state is " + state.msg + " status is " + state.status);
     //
     // let statusServ = document.getElementsByClassName("statusService");
     // if (state.status == 0) {
