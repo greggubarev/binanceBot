@@ -5,7 +5,7 @@
 
         return console.log("state is " + state.msg + " status is " + state.status);
 
-    let statusServ = document.getElementById("statusService");
+    let statusServ = document.getElementsByClassName("statusService");
     if (state.status == 0) {
         statusServ.textContent += "online";
     } else {
