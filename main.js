@@ -20,9 +20,9 @@ let statusServ = document.getElementsByClassName("statusService1");
 let localState = localStorage['Status'];
 console.log(localState);
 if (localState == 0) {
-    statusServ.textContent = "online";
+    statusServ.textContent += "online";
 } else {
-    statusServ.textContent = "maintenance";
+    statusServ.textContent += "maintenance";
 }
 // window.addEventListener('load', function() {
 //
