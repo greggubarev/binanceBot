@@ -2,16 +2,9 @@
     let url = 'https://api.binance.com/wapi/v3/systemStatus.html';
     let response = await fetch(url);
     let state = await response.json(); // читаем ответ в формате JSON
-    let statusServ = document.getElementsByClassName("statusService1");
     localStorage['Status'] = state.status;
     // return statusServ.textContent += state.status;
-    let localStatus = localStorage['Status'].value;
-    console.log(localStatus);
-    if (localStatus == "0") {
-        statusServ.textContent = "online";
-    } else {
-        statusServ.textContent = "maintenance";
-    }
+
         return console.log("state is " + state.msg + " status is " + state.status);
     //
     // let statusServ = document.getElementsByClassName("statusService");
@@ -22,7 +15,14 @@
     // }
 
 })();
+let statusServ = document.getElementsByClassName("statusService1");
 
+let localStatus = localStorage['Status'].value;
+if (localStatus == "0") {
+    statusServ.textContent = "online";
+} else {
+    statusServ.textContent = "maintenance";
+}
 // window.addEventListener('load', function() {
 //
 //     let status = document.getElementById("status");
