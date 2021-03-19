@@ -6,6 +6,7 @@
     localStorage['Status'] = state.status;
     // return statusServ.textContent += state.status;
     let localStatus = localStorage['Status'].value;
+    console.log(localStatus);
     if (localStatus == "0") {
         statusServ.textContent = "online";
     } else {
