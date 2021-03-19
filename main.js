@@ -5,9 +5,9 @@
     let statusServ = document.getElementsByClassName("statusService1");
     // return statusServ.textContent += state.status;
     if (state.status == "0") {
-        statusServ = "online";
+        statusServ.textContent = "online";
     } else {
-        statusServ = "maintenance";
+        statusServ.textContent = "maintenance";
 
     }
         return console.log("state is " + state.msg + " status is " + state.status);
