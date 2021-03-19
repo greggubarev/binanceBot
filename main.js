@@ -1,9 +1,9 @@
-﻿async function StatusCheck() {
+﻿(async function StatusCheck() {
     let url = 'https://api.binance.com/wapi/v3/systemStatus.html';
     let response = await fetch(url);
     let state = await response.json(); // читаем ответ в формате JSON
     return console.log("state is " + state.msg);
-}
+})();
 
 // window.addEventListener('load', function() {
 //     let request = new XMLHttpRequest();
