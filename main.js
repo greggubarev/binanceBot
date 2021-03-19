@@ -10,5 +10,6 @@
 //     }
 // }
 
-var request = new XMLHttpRequest();
+let request = new XMLHttpRequest();
 request.open('GET', `https://api.binance.com/wapi/v3/systemStatus.html`);
+console.log(request.open('GET', `https://api.binance.com/wapi/v3/systemStatus.html`));
