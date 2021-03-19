@@ -5,8 +5,8 @@
     let statusServ = document.getElementsByClassName("statusService1");
     // let paragraph = document.getElementById("p");
     let text = document.createTextNode(state.msg);
-
-    return statusServ.appendChild(text);
+    statusServ.appendChild(text);
+    return console.log("state is " + state.msg + " status is " + state.status);
     // return statusServ.textContent += state.msg;
         // return console.log("state is " + state.msg + " status is " + state.status);
     //
