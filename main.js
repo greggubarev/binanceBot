@@ -6,17 +6,13 @@
     // return statusServ.textContent += state.status;
     let statusServ = document.getElementById("statusService");
     if (state.status == 0) {
-        statusServ.textContent += "online";
-        statusServ[15].innerHTML.fontcolor("green");
+        statusServ.textContent += state.msg;
+        // statusServ[15].innerHTML.fontcolor("red");
     } else {
-        statusServ.textContent += "system maintenance";
-        statusServ[15].innerHTML.fontcolor("red");
+        statusServ.textContent += state.msg;
 
     }
         return console.log("state is " + state.msg + " status is " + state.status);
-
-
-
 })();
 // let statusServ = document.getElementById("statusService");
 //
